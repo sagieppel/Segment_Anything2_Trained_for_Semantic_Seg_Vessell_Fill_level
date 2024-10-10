@@ -26,12 +26,16 @@ Set parameters:
 
 # Training:
 ## For training first download (click to download):
-[LabPics1 dataset]
-[LabPics2 Chemistry]
-[LabPics2 Medical].
+[LabPics1 dataset](https://zenodo.org/records/3697452/files/LabPicsV1.zip?download=1)
+
+[LabPics2 Chemistry](https://zenodo.org/records/4736111/files/LabPicsChemistry.zip?download=1)
+
+[LabPics2 Medical](https://zenodo.org/records/4736111/files/LabPicsMedical.zip?download=1).
 ## Optional Datasets:
-Subset of the of the Coco dataset containing vessels  such as glasses bottles [available here]()
-[Trans10k dataset for transparent vessels]
+
+Subset of the of the Coco dataset containing vessels  such as glasses bottles [available here](https://icedrive.net/0/c5NqTAyVdn), note this is a subset of the COCO dataset generated using the procedure described [here](https://icedrive.net/0/c5NqTAyVdn).
+
+[Trans10k dataset for transparent vessels](https://xieenze.github.io/projects/TransLAB/TransLAB.html)
 
 
 ## Run training: TRAIN_Vessel_Filled.py
