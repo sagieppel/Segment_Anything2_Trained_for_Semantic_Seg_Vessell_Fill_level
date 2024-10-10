@@ -1,6 +1,8 @@
-# Fine-tuning Segment Anything Model 2 (SAM2) For segmentation vessels, fill level, liquid level, transparent regions 
+# Fine-tuning Segment Anything Model 2 (SAM2) For semantic segmentation of vessels, fill level, liquid level, transparent regions 
  This is code for fine tuning SAM2 for semantic  segmentation of Vessel/Containers fill-level/liquid-level and transparent regions. 
  This is mainly focused on transparent vessels, liquids and materials in chemistry labs, kitchens and everyday life and is part of a project to test top models on lab and materials related tasks.
+ 
+Note that SAM is not usually focused on semantic segmentation but it work suprisingly well on this task.
 
 # Requirements:
 The requirements are the same as the SAM 2  main repository.
