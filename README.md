@@ -9,9 +9,12 @@ The requirements are the same as the SAM 2  main repository.
 
 Installations are the same as [SAM2](https://dl.fbaipublicfiles.com/segment_anything_2)  repository.
 
-Download SAM2 checkpoint from [[1](https://dl.fbaipublicfiles.com/segment_anything_2/092824/sam2.1_hiera_small.pt) or [2](https://github.com/facebookresearch/sam2?tab=readme-ov-file#download-checkpoints).
+Download SAM2 checkpoint from [1](https://dl.fbaipublicfiles.com/segment_anything_2/092824/sam2.1_hiera_small.pt) or [2](https://github.com/facebookresearch/sam2?tab=readme-ov-file#download-checkpoints).
 (note by default the code load the small model you can also download other models from [1](https://drive.google.com/file/d/1xY-42gDw9qG122IUvsy7BA-NkyGQm0YM/view?usp=sharing), [2](https://icedrive.net/s/xykfubZ6gRtjgGYWWBgvFkQDa933), [3](https://icedrive.net/s/CCkR6wRWuhg4fvX9zVfNC8u74A9N), [4](https://drive.google.com/drive/folders/1j9Ovaq-hGeU_UzJv4RN2jpvYz6wxK3uB?usp=drive_link).
 
+
+![Figure 1](/im1.jpg)
+![Figure 2](/im2.jpg)
 # Running on images:
 
 Train or download a pretrained model from [1](https://drive.google.com/file/d/1xY-42gDw9qG122IUvsy7BA-NkyGQm0YM/view?usp=sharing), [2](https://icedrive.net/s/xykfubZ6gRtjgGYWWBgvFkQDa933), [3](https://icedrive.net/s/CCkR6wRWuhg4fvX9zVfNC8u74A9N), [4](https://drive.google.com/drive/folders/1j9Ovaq-hGeU_UzJv4RN2jpvYz6wxK3uB?usp=drive_link).
