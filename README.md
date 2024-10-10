@@ -3,13 +3,13 @@
 
 # Requirements:
 The requirements are the same as the SAM 2  main repository.
-Installations are the same as [SAM2]()  repository.
-Download SAM2 checkpoint from [1] or [2].
+Installations are the same as [SAM2](https://dl.fbaipublicfiles.com/segment_anything_2)  repository.
+Download SAM2 checkpoint from [[1](https://dl.fbaipublicfiles.com/segment_anything_2/092824/sam2.1_hiera_small.pt) or [2](https://github.com/facebookresearch/sam2?tab=readme-ov-file#download-checkpoints)..
 (note by default the code load the small model you can also download other models from [here])
 
 # Running on images:
 Train or download a pretrained model from [1] or [2].
-Download SAM2 checkpoint from [1] or [2].
+Download SAM2 checkpoint from [1](https://dl.fbaipublicfiles.com/segment_anything_2/092824/sam2.1_hiera_small.pt) or [2](https://github.com/facebookresearch/sam2?tab=readme-ov-file#download-checkpoints).
 (note by default the code uses the small model but you can change this).
 
 In: Run_On_Folder.py
@@ -18,7 +18,7 @@ Set parameters:
 
 --model_path = path to trained model download from [1](2)
 
---sam2_checkpoint = path to sam2 standard checkpoint download from [1]()
+--sam2_checkpoint = path to sam2 standard checkpoint download from [1](https://dl.fbaipublicfiles.com/segment_anything_2/092824/sam2.1_hiera_small.pt) or [2](https://github.com/facebookresearch/sam2?tab=readme-ov-file#download-checkpoints).
 
 --outdir  = output-dir were annotations will be saved (annotations will also be displayed on screen)
 
@@ -33,14 +33,14 @@ Set parameters:
 [LabPics2 Medical](https://zenodo.org/records/4736111/files/LabPicsMedical.zip?download=1).
 ## Optional Datasets:
 
-Subset of the of the Coco dataset containing vessels  such as glasses bottles [available here](https://icedrive.net/0/c5NqTAyVdn), note this is a subset of the COCO dataset generated using the procedure described [here](https://icedrive.net/0/c5NqTAyVdn).
+Subset of the of the Coco dataset containing vessels  such as glasses bottles [available here](https://icedrive.net/0/c5NqTAyVdn), note this is a subset of the COCO dataset generated using the procedure described [here](https://github.com/sagieppel/Detecting-and-segmenting-and-classifying-materials-inside-vessels-in-images-using-convolutional-net?tab=readme-ov-file#converting-coco-dataset-into-training-data).
 
 [Trans10k dataset for transparent vessels](https://xieenze.github.io/projects/TransLAB/TransLAB.html)
 
 
 ## Run training: TRAIN_Vessel_Filled.py
 In TRAIN_Vessel_Filled.py set parameters:
---sam2_checkpoint = path to sam2 standard checkpoint download from [1]()
+--sam2_checkpoint = path to sam2 standard checkpoint download from [1](https://dl.fbaipublicfiles.com/segment_anything_2/092824/sam2.1_hiera_small.pt) or [2](https://github.com/facebookresearch/sam2?tab=readme-ov-file#download-checkpoints).
 --labpics1_dir="path to dataset dir for labpics1 simple train set"
 --labpics2_chemistry_dir="path to dataset dir for labpics2 chemistry train set"
 --labpics2_medical_dir'="path to dataset dir for labpics2 medical train set")
@@ -58,6 +58,19 @@ Running this will train the model and save the weight in the log dir.
 
 Evaluation of the train model on lab pics dataset can be done using:
 Evaluate_Vessel_Filled.py
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 # SAM 2: Segment Anything in Images and Videos (from original repository)
