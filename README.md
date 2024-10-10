@@ -1,20 +1,23 @@
 # Code for fine-tuning Segment Anything Model 2 (SAM2) For containers, fill level
- This is code for fine tuning SAM2 for semantic  segmentation of Vessel/Containers fill-level/liquid-level and transparent regions. This is mainly focused on transparent vessels, liquids and materials in chemistry labs, kitchens and everyday life and is part of a project to test top models on lab and materials related tasks.
+ This is code for fine tuning SAM2 for semantic  segmentation of Vessel/Containers fill-level/liquid-level and transparent regions. 
+ This is mainly focused on transparent vessels, liquids and materials in chemistry labs, kitchens and everyday life and is part of a project to test top models on lab and materials related tasks.
 
 # Requirements:
 The requirements are the same as the SAM 2  main repository.
+
 Installations are the same as [SAM2](https://dl.fbaipublicfiles.com/segment_anything_2)  repository.
+
 Download SAM2 checkpoint from [[1](https://dl.fbaipublicfiles.com/segment_anything_2/092824/sam2.1_hiera_small.pt) or [2](https://github.com/facebookresearch/sam2?tab=readme-ov-file#download-checkpoints)..
 (note by default the code load the small model you can also download other models from [here])
 
 # Running on images:
+
 Train or download a pretrained model from [1] or [2].
+
 Download SAM2 checkpoint from [1](https://dl.fbaipublicfiles.com/segment_anything_2/092824/sam2.1_hiera_small.pt) or [2](https://github.com/facebookresearch/sam2?tab=readme-ov-file#download-checkpoints).
 (note by default the code uses the small model but you can change this).
 
-In: Run_On_Folder.py
-
-Set parameters:
+## In: Run_On_Folder.py Set parameters:
 
 --in_dir = folder with image to segment
 
