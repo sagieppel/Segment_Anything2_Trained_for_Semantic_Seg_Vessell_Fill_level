@@ -1,4 +1,62 @@
-# SAM 2: Segment Anything in Images and Videos
+# Code for fine-tuning Segment Anything Model 2 (SAM2) For containers, fill level
+ This is code for fine tuning SAM2 for semantic  segmentation of Vessel/Containers fill-level/liquid-level and transparent regions. This is mainly focused on transparent vessels, liquids and materials in chemistry labs, kitchens and everyday life and is part of a project to test top models on lab and materials related tasks.
+
+# Requirements:
+The requirements are the same as the SAM 2  main repository.
+Installations are the same as [SAM2]()  repository.
+Download SAM2 checkpoint from [1] or [2].
+(note by default the code load the small model you can also download other models from [here])
+
+# Running on images:
+Train or download a pretrained model from [1] or [2].
+Download SAM2 checkpoint from [1] or [2].
+(note by default the code uses the small model but you can change this).
+
+In: Run_On_Folder.py
+Set parameters:
+--in_dir = folder with image to segment
+
+--model_path = path to trained model download from [1](2)
+
+--sam2_checkpoint = path to sam2 standard checkpoint download from [1]()
+
+--outdir  = output-dir were annotations will be saved (annotations will also be displayed on screen)
+
+
+
+# Training:
+## For training first download (click to download):
+[LabPics1 dataset]
+[LabPics2 Chemistry]
+[LabPics2 Medical].
+## Optional Datasets:
+Subset of the of the Coco dataset containing vessels  such as glasses bottles [available here]()
+[Trans10k dataset for transparent vessels]
+
+
+## Run training: TRAIN_Vessel_Filled.py
+In TRAIN_Vessel_Filled.py set parameters:
+--sam2_checkpoint = path to sam2 standard checkpoint download from [1]()
+--labpics1_dir="path to dataset dir for labpics1 simple train set"
+--labpics2_chemistry_dir="path to dataset dir for labpics2 chemistry train set"
+--labpics2_medical_dir'="path to dataset dir for labpics2 medical train set")
+--coco_vessel_dir=path subset of coco dataset containing only vessels this is optional leave empty if unused ("")
+
+--trans10k_dir = path to trans10k (optional leave empty if unused(")
+--log_dir = path to log folder where trained model will be saved
+
+## What does it do
+
+Running this will train the model and save the weight in the log dir.
+
+
+# Evaluation on LabPics dataset: Evaluate_Vessel_Filled.py
+
+Evaluation of the train model on lab pics dataset can be done using:
+Evaluate_Vessel_Filled.py
+
+
+# SAM 2: Segment Anything in Images and Videos (from original repository)
 
 **[AI at Meta, FAIR](https://ai.meta.com/research/)**
 
