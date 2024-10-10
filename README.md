@@ -13,7 +13,9 @@ Download SAM2 checkpoint from [1](https://dl.fbaipublicfiles.com/segment_anythin
 (note by default the code uses the small model but you can change this).
 
 In: Run_On_Folder.py
+
 Set parameters:
+
 --in_dir = folder with image to segment
 
 --model_path = path to trained model download from [1](2)
@@ -40,13 +42,20 @@ Subset of the of the Coco dataset containing vessels  such as glasses bottles [a
 
 ## Run training: TRAIN_Vessel_Filled.py
 In TRAIN_Vessel_Filled.py set parameters:
+
 --sam2_checkpoint = path to sam2 standard checkpoint download from [1](https://dl.fbaipublicfiles.com/segment_anything_2/092824/sam2.1_hiera_small.pt) or [2](https://github.com/facebookresearch/sam2?tab=readme-ov-file#download-checkpoints).
+
 --labpics1_dir="path to dataset dir for labpics1 simple train set"
+
 --labpics2_chemistry_dir="path to dataset dir for labpics2 chemistry train set"
+
 --labpics2_medical_dir'="path to dataset dir for labpics2 medical train set")
+
 --coco_vessel_dir=path subset of coco dataset containing only vessels this is optional leave empty if unused ("")
 
+
 --trans10k_dir = path to trans10k (optional leave empty if unused(")
+
 --log_dir = path to log folder where trained model will be saved
 
 ## What does it do
