@@ -1,16 +1,18 @@
 # Fine-tuning Segment Anything Model 2 (SAM2) For semantic segmentation of vessels, fill level, liquid level, transparent regions 
  This is code for fine tuning SAM2 for semantic  segmentation of Vessel/Containers fill-level/liquid-level and transparent regions. 
- This is mainly focused on transparent vessels, liquids and materials in chemistry labs, kitchens and everyday life and is part of a project to test top models on lab and materials related tasks.
+ Basically an experiment to see if SAM2 can be reporpose as semantic segmentation net, the answer is yes but not with great advantage.
+ The semantic  classes  vessels,  filled region of the vessel, and transparent region.
+
+ Other then the training and inference script the only modification to SAM2 code is removal of no_grad commands from the code
  
-Note that SAM is not usually focused on semantic segmentation but it work suprisingly well on this task.
 
 # Requirements:
 The requirements are the same as the SAM 2  main repository.
 
 Installations are the same as [SAM2](https://dl.fbaipublicfiles.com/segment_anything_2)  repository.
 
-Download SAM2 checkpoint from [1](https://dl.fbaipublicfiles.com/segment_anything_2/092824/sam2.1_hiera_small.pt) or [2](https://github.com/facebookresearch/sam2?tab=readme-ov-file#download-checkpoints).
-(note by default the code load the small model you can also download other models from [1](https://drive.google.com/file/d/1xY-42gDw9qG122IUvsy7BA-NkyGQm0YM/view?usp=sharing), [2](https://icedrive.net/s/xykfubZ6gRtjgGYWWBgvFkQDa933), [3](https://icedrive.net/s/CCkR6wRWuhg4fvX9zVfNC8u74A9N), [4](https://drive.google.com/drive/folders/1j9Ovaq-hGeU_UzJv4RN2jpvYz6wxK3uB?usp=drive_link).
+Download SAM2 checkpoint from [1](https://github.com/facebookresearch/sam2?tab=readme-ov-file#sam-2-checkpoints) or [2](https://icedrive.net/s/CCkR6wRWuhg4fvX9zVfNC8u74A9N).
+Note that this code use the small model version 2.0 (sam2_hiera_small.pt) by defult but support also the large model.
 
 
 ![Figure 1](/Im1.jpg)
@@ -21,16 +23,18 @@ Download SAM2 checkpoint from [1](https://dl.fbaipublicfiles.com/segment_anythin
 
 Train or download a pretrained model from [1](https://drive.google.com/file/d/1xY-42gDw9qG122IUvsy7BA-NkyGQm0YM/view?usp=sharing), [2](https://icedrive.net/s/xykfubZ6gRtjgGYWWBgvFkQDa933), [3](https://icedrive.net/s/CCkR6wRWuhg4fvX9zVfNC8u74A9N), [4](https://drive.google.com/drive/folders/1j9Ovaq-hGeU_UzJv4RN2jpvYz6wxK3uB?usp=drive_link).
 
-Download SAM2 checkpoint from [1](https://dl.fbaipublicfiles.com/segment_anything_2/092824/sam2.1_hiera_small.pt) or [2](https://github.com/facebookresearch/sam2?tab=readme-ov-file#download-checkpoints).
-(note by default the code uses the small model but you can change this).
+Download SAM2 checkpoint from [1](https://github.com/facebookresearch/sam2?tab=readme-ov-file#sam-2-checkpoints) or [2](https://icedrive.net/s/CCkR6wRWuhg4fvX9zVfNC8u74A9N).
+Note that this code use the small model version 2.0 (sam2_hiera_small.pt) by defult but support also the large model.
 
 ## In: Run_On_Folder.py Set parameters:
 
 --in_dir = folder with image to segment
 
---model_path = path to trained model download from [1](https://drive.google.com/file/d/1xY-42gDw9qG122IUvsy7BA-NkyGQm0YM/view?usp=sharing), [2](https://icedrive.net/s/xykfubZ6gRtjgGYWWBgvFkQDa933), [3](https://icedrive.net/s/CCkR6wRWuhg4fvX9zVfNC8u74A9N), [4](https://drive.google.com/drive/folders/1j9Ovaq-hGeU_UzJv4RN2jpvYz6wxK3uB?usp=drive_link).
+--model_path = path to trained model download from [1](https://icedrive.net/s/CCkR6wRWuhg4fvX9zVfNC8u74A9N),  [4](https://drive.google.com/drive/folders/1j9Ovaq-hGeU_UzJv4RN2jpvYz6wxK3uB?usp=drive_link), but defult this use the small mode (model_small.torch but a large model also supplied model_large.torch) 
 
---sam2_checkpoint = path to sam2 standard checkpoint download from [1](https://dl.fbaipublicfiles.com/segment_anything_2/092824/sam2.1_hiera_small.pt) or [2](https://github.com/facebookresearch/sam2?tab=readme-ov-file#download-checkpoints).
+--sam2_checkpoint = path to sam2 standard checkpoint
+
+--model_cfg = config for the model (by defult small sam2_hiera_l.yaml) the config come with the repo.
 
 --outdir  = output-dir were annotations will be saved (annotations will also be displayed on screen)
 
@@ -53,7 +57,9 @@ Subset of the of the Coco dataset containing vessels  such as glasses bottles [a
 ## Run training: TRAIN_Vessel_Filled.py
 In TRAIN_Vessel_Filled.py set parameters:
 
---sam2_checkpoint = path to sam2 standard checkpoint download from [1](https://dl.fbaipublicfiles.com/segment_anything_2/092824/sam2.1_hiera_small.pt) or [2](https://github.com/facebookresearch/sam2?tab=readme-ov-file#download-checkpoints).
+--sam2_checkpoint = path to sam2 standard checkpoint by defult small (([sam2_hiera_small.pt]).
+
+--model_cfg = config for the model (by defult small sam2_hiera_l.yaml) the config come with the repo.
 
 --labpics1_dir="path to dataset dir for labpics1 simple train set"
 
@@ -92,7 +98,7 @@ Evaluate_Vessel_Filled.py
 
 
 
-# SAM 2: Segment Anything in Images and Videos (from original repository)
+# SAM 2: Segment Anything in Images and Videos (from original repository note this code is based on version 2.0 and not version 2.1)
 
 **[AI at Meta, FAIR](https://ai.meta.com/research/)**
 
