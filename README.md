@@ -21,10 +21,11 @@ Note that this code use the small model version 2.0 (sam2_hiera_small.pt) by def
 ![Figure 2](/Im2.jpg)
 # Running on images:
 
-Train or download a pretrained model from [1](https://drive.google.com/file/d/1xY-42gDw9qG122IUvsy7BA-NkyGQm0YM/view?usp=sharing), [2](https://icedrive.net/s/xykfubZ6gRtjgGYWWBgvFkQDa933), [3](https://icedrive.net/s/CCkR6wRWuhg4fvX9zVfNC8u74A9N), [4](https://drive.google.com/drive/folders/1j9Ovaq-hGeU_UzJv4RN2jpvYz6wxK3uB?usp=drive_link).
+Train or download a pretrained model from  [1](https://icedrive.net/s/CCkR6wRWuhg4fvX9zVfNC8u74A9N), [2](https://drive.google.com/drive/folders/1j9Ovaq-hGeU_UzJv4RN2jpvYz6wxK3uB?usp=drive_link).
 
 Download SAM2 checkpoint from [1](https://github.com/facebookresearch/sam2?tab=readme-ov-file#sam-2-checkpoints) or [2](https://icedrive.net/s/CCkR6wRWuhg4fvX9zVfNC8u74A9N).
-Note that this code use the small model version 2.0 (sam2_hiera_small.pt) by defult but support also the large model.
+
+Note that this code use the small model version 2.0 (sam2_hiera_small.pt, model_small.torch) by defult but support also the large model.
 
 ## In: Run_On_Folder.py Set parameters:
 
